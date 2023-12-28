@@ -11,7 +11,6 @@
 
 <H> Welcome To Web Development Playground.</H>
 <p>Test your HTML skills. </p>
-<img src= "Images/HTMLPLogo.png"
 
 --------------------------------------------------------------------
 <strong> By Faisal Dad Khan </strong>
