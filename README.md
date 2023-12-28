@@ -11,7 +11,7 @@
 
 <H> Welcome To HTML Playground.</H>
 <p>Test your HTML skills. </p>
-<img src= "HTML-Playground/Images/HTMLPLogo.png"
+<img src= "Images/HTMLPLogo.png"
 
 --------------------------------------------------------------------
 <strong> By Faisal Dad Khan </strong>
