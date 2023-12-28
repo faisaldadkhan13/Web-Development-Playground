@@ -1,5 +1,5 @@
 # Web-Development-Playground
-<p>HTML, Css & Java Playground for beginners in Web Development.</p>
+<p>HTML, CSS & Java Playground for beginners in Web Development.</p>
 
 <strong>How to use?</strong>
 
