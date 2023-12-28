@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Playground</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/dracula.min.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #editor {
+            flex: 1;
+            height: 100%;
+        }
+
+        #output {
+            flex: 1;
+            height: 100%;
+            overflow: auto;
+            padding: 10px;
+            background-color: #f8f8f8;
+            box-shadow: -5px 0 5px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="editor"></div>
+    <iframe id="output" sandbox="allow-scripts allow-same-origin"></iframe>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script>
+        const editor = CodeMirror(document.getElementById('editor'), {
+            value: '<!DOCTYPE html>\n<html lang="en">\n<head>\n\t<meta charset="UTF-8">\n\t<meta name="viewport" content="width=device-width, initial-scale=1.0">\n\t<title>HTML Playground</title>\n</head>\n<body>\n\t<h1>Hello, HTML Playground!</h1>\n</body>\n</html>',
+            mode: 'htmlmixed',
+            theme: 'dracula',
+            lineNumbers: true,
+            lineWrapping: true,
+            autofocus: true,
+        });
+
+        const outputFrame = document.getElementById('output');
+        const updateOutput = () => {
+            const code = editor.getValue();
+            outputFrame.srcdoc = code;
+        };
+
+        editor.on('changes', updateOutput);
+        updateOutput();
+    </script>
+</body>
+</html>
